@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { Switch, Route } from "react-router-dom";
+import Index from 'pages';
+
+import styles from "./index.module.scss";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [cords, setCords] = useState({ x: window.innerWidth/2, y: window.innerHeight/2 });
+  const [onHover, setOnHover] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("mousemove", (e: any) => {
+      setCords({ x: e.x, y: e.y });
+      setOnHover(e.target.nodeName === "A");
+    });
+  }, []);
+
+  return (<>
+    <Switch>
+      <Route exact path="/" component={Index} />
+    </Switch>
+    <div className={[styles.cursor, onHover ? styles.cursorHover : ""].join(" ")} style={{ left: cords.x - 30, top: cords.y - 30 }} />
+    <div className={[styles.cursor2, onHover ? styles.cursor2Hover : ""].join(" ")} style={{ left: cords.x - 30, top: cords.y - 30 }} />
+  </>);
 }
 
 export default App;
