@@ -10,18 +10,31 @@ function App() {
   const [onHover, setOnHover] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("mousemove", (e: any) => {
-      setCords({ x: e.x, y: e.y });
-      setOnHover(e.target.nodeName === "A");
-    });
+
+    let mousemove = (e: any) => {
+      //setCords({ x: e.x, y: e.y });
+
+
+      ["cursor1", "cursor2"].forEach((id) => {
+        document.getElementById(id)!.style.left = e.x-30+"px";
+        document.getElementById(id)!.style.top = e.y-30+"px";
+      })
+      setOnHover(["A"].indexOf(e.target.nodeName) >= 0 || Array.from(e.target.classList).indexOf("hover") >= 0);
+    }
+
+    window.addEventListener("mousemove", mousemove);
+
+    return () => {
+      window.removeEventListener("mousemove", mousemove);
+    }
   }, []);
 
   return (<>
     <Switch>
       <Route exact path="/" component={Index} />
     </Switch>
-    <div className={[styles.cursor, onHover ? styles.cursorHover : ""].join(" ")} style={{ left: cords.x - 30, top: cords.y - 30 }} />
-    <div className={[styles.cursor2, onHover ? styles.cursor2Hover : ""].join(" ")} style={{ left: cords.x - 30, top: cords.y - 30 }} />
+    <div id="cursor1" className={[styles.cursor, onHover ? styles.cursorHover : ""].join(" ")} />
+    <div id="cursor2" className={[styles.cursor2, onHover ? styles.cursor2Hover : ""].join(" ")} />
   </>);
 }
 
