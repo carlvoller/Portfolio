@@ -58,7 +58,7 @@ function Index() {
                         </div>
                         <div id="codecollab" className={[styles.projectContainer, styles.codecollab, "slideUpContainer"].join(" ")} style={{ backgroundImage: `url(/assets/codecollab-stripe.svg)`}}>
                             <div className={styles.texts}>
-                                <a href="https://codecollab.io">
+                                <a href="https://codecollab.io" target="_blank" rel="noreferrer">
                                     <div className="hover">
                                         <h1 className="slideUp">Code<br />Collab</h1>
                                     </div>
@@ -66,11 +66,11 @@ function Index() {
                                 <div className="slideUp">
                                     <h3>Role: Co-Founder, CEO, Product Manager, Designer</h3>
                                     <br />
-                                    <h3>A collaborative code editor and compiler for the web. Allows its users to test and run code in over 17 different programming languages in a real-time collaborative environment. Users can also test and host websites.</h3>
+                                    <h3>A collaborative code editor and compiler for the web. Allows users to test and run code in over 17 different programming languages in a real-time collaborative environment. Users can also test and host websites.</h3>
                                     <br />
-                                    <h3>I founded this company back in 2017 with my partner. Today, CodeCollab has grown to over 30 thousands users with partners like <a className={styles.animatedLink} href="https://openlearning.com">openlearning.com</a></h3>
+                                    <h3>I founded this company back in 2017 with my partner. Today, CodeCollab has grown to over 36 thousand registered users, partnering with others in the industry like <a style={{ textDecoration: 'underline' }} rel="noreferrer" href="https://openlearning.com" target="_blank">Open Learning</a> and <a style={{ textDecoration: 'underline' }} rel="noreferrer" href="https://tk.sg" target="_blank">Tinkercademy</a></h3>
                                     <br />
-                                    <h3>Tech: MongoDB, ExpressJS, ReactJS, Socket.IO, ShareDB, Docker</h3>
+                                    <h3>Tech: MongoDB, RedisDB, GoLang, C++/CPython, ExpressJS, ShareDB, Docker, NextJS, Socket.IO</h3>
                                 </div>
                             </div>
                             <div className={styles.demoImage} style={{ backgroundImage: `url(/assets/codecollab-computer.svg)` }}>
@@ -79,7 +79,7 @@ function Index() {
                         </div>
                         <div id="swiftinsg" className={[styles.projectContainer, styles.swiftinsg, "slideUpContainer"].join(" ")} style={{ backgroundImage: `url(/assets/swift-background.svg)`}}>
                             <div className={styles.texts}>
-                                <a href="https://swiftinsg.org">
+                                <a href="https://swiftinsg.org" target="_blank" rel="noreferrer">
                                     <div className="hover">
                                         <h1 className="slideUp">SwiftInSG<br />Website</h1>
                                     </div>
@@ -87,7 +87,7 @@ function Index() {
                                 <div className="slideUp">
                                     <h3>Role: Project Lead, Web Admin</h3>
                                     <br />
-                                    <h3>Created the website for the annual Swift Innovators' Summit held by Apple Singapore and IMDA. Developed the website in less than 1 month. Currently no longer the maintainer for this site.</h3>
+                                    <h3>Created the website for the annual Swift Innovators' Summit held by Apple Singapore and IMDA. I was rushed by Apple to deliver the site in less than one month, so this isn't my best work but its still pretty good.</h3>
                                     <br />
                                     <h3>Tech: ReactJS, Gatsby</h3>
                                 </div>
@@ -95,7 +95,7 @@ function Index() {
                         </div>
                         <div id="drawingboard" className={[styles.projectContainer, styles.drawingboard, "slideUpContainer"].join(" ")} style={{ backgroundImage: `url(/assets/drawingboard-background.png)`}}>
                             <div className={styles.texts}>
-                                <a href="https://drawingboard.carlvoller.is">
+                                <a href="https://drawingboard.carlvoller.is" target="_blank" rel="noreferrer">
                                     <div className="hover">
                                         <h1 className="slideUp">Drawing Board</h1>
                                     </div>
