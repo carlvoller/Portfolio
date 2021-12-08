@@ -3,12 +3,18 @@
 
 body {
   margin: 0;
-  font-family: 'Courier Prime', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: none !important;
+  transition: background-color 1s ease;
+  background-color: #FDF8ED;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -18,6 +24,17 @@ a {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.sectionTwoBg {
+  background-color: #151515;
+  & .cursor {
+    border: 1px solid white;
+  }
+
+  & .cursor2 {
+    background-color: white;
+  }
 }
 
 .cursor {
@@ -32,6 +49,7 @@ code {
   justify-content: center;
   transition: .1s;
   pointer-events: none;
+  z-index: 1000;
 }
 
 .cursor2 {
@@ -41,6 +59,7 @@ code {
   border-radius: 50%;
   position: fixed;
   margin: 26px;
+  z-index: 1000;
   pointer-events: none;
   transition: 1s width, 1s height, 1s margin, 0.2s transform;
 }
@@ -50,9 +69,28 @@ code {
 }
 
 .cursor2Hover {
-  transform: scale(6);
-  pointer-events: none;
-  mix-blend-mode: difference;
-  background-color: white;
-  opacity: 1;
+    transform: scale(6);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    background-color: white;
+    opacity: 1;
+    &:active {
+        transform: scale(10);
+    }
+}
+
+.slideUpAnimation {
+    animation-delay: 1s;
+    animation: slideup 1s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@keyframes slideup {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);   
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

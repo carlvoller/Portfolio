@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1143" height="1286" viewBox="0 0 1143 1286">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #5d1c2a;
+      }
+
+      .cls-3 {
+        filter: url(#Path_58-3);
+      }
+
+      .cls-4 {
+        filter: url(#Path_58-2);
+      }
+
+      .cls-5 {
+        filter: url(#Path_58);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#c3073f"/>
+      <stop offset="1" stop-color="#5d1c2a"/>
+    </linearGradient>
+    <filter id="Path_58" x="0" y="0" width="1143" height="1286" filterUnits="userSpaceOnUse">
+      <feOffset dx="-30" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="35" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_58-2" x="272.525" y="0" width="497.948" height="581.948" filterUnits="userSpaceOnUse">
+      <feOffset dx="-30" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="35" result="blur-2"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_58-3" x="374.525" y="704.052" width="497.948" height="581.948" filterUnits="userSpaceOnUse">
+      <feOffset dx="-30" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="35" result="blur-3"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_200" data-name="Group 200" transform="translate(-638 105)">
+    <g id="Group_114" data-name="Group 114" transform="translate(55)">
+      <g class="cls-5" transform="matrix(1, 0, 0, 1, 583, -105)">
+        <path id="Path_58-4" data-name="Path 58" class="cls-1" d="M278.634,1076l573-1076h360l-573,1076" transform="translate(-143.63 105)"/>
+      </g>
+    </g>
+    <g id="Group_198" data-name="Group 198" transform="translate(327.525)">
+      <g class="cls-4" transform="matrix(1, 0, 0, 1, 310.47, -105)">
+        <path id="Path_58-5" data-name="Path 58" class="cls-2" d="M278.634,371.948,476.706,0h89.876L368.51,371.948" transform="translate(128.89 105)"/>
+      </g>
+    </g>
+    <g id="Group_199" data-name="Group 199" transform="translate(429.525 704.052)">
+      <g class="cls-3" transform="matrix(1, 0, 0, 1, 208.47, -809.05)">
+        <path id="Path_58-6" data-name="Path 58" class="cls-2" d="M278.634,371.948,476.706,0h89.876L368.51,371.948" transform="translate(230.89 809.05)"/>
+      </g>
+    </g>
+  </g>
+</svg>

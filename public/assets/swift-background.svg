@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2489" height="1384" viewBox="0 0 2489 1384">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Web_1920_3);
+      }
+
+      .cls-2 {
+        fill: #f8aea2;
+      }
+
+      .cls-3 {
+        fill: #fcf4c4;
+      }
+
+      .cls-4 {
+        fill: #f6b800;
+      }
+
+      .cls-5 {
+        fill: rgba(255,255,255,0);
+      }
+    </style>
+    <clipPath id="clip-Web_1920_3">
+      <rect width="2489" height="1384"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_3" data-name="Web 1920 – 3" class="cls-1">
+    <rect class="cls-5" width="2489" height="1384"/>
+    <g id="Group_23" data-name="Group 23">
+      <rect id="Shape" class="cls-2" width="671.018" height="707.022" transform="matrix(0.731, 0.682, -0.682, 0.731, 1583.1, 378.461)"/>
+      <rect id="Shape-2" data-name="Shape" class="cls-3" width="865.123" height="707.022" transform="matrix(0.731, 0.682, -0.682, 0.731, 1846.586, -297.177)"/>
+      <circle id="Shape-3" data-name="Shape" class="cls-2" cx="130.447" cy="130.447" r="130.447" transform="translate(1051.506 212.802)"/>
+      <circle id="Shape-4" data-name="Shape" class="cls-4" cx="14.61" cy="14.61" r="14.61" transform="translate(1346.316 396.993)"/>
+      <circle id="Shape-5" data-name="Shape" class="cls-4" cx="218.202" cy="218.202" r="218.202" transform="translate(312.798 -274.403)"/>
+      <rect id="Shape-6" data-name="Shape" class="cls-4" width="671.018" height="257.763" transform="matrix(0.731, 0.682, -0.682, 0.731, 1804.193, 396.993)"/>
+    </g>
+  </g>
+</svg>
