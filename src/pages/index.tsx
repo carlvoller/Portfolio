@@ -36,9 +36,6 @@ function Index() {
                 <div id="horizontalScrollingContainer" className={styles.scrollingContainer}>
                     <div style={{ display: 'flex' }}>
                         <div className={[styles.projectContainer, "slideUpContainer"].join(" ")}>
-                            <div style={{ minWidth: '40vw', height: '50vh' }}>
-                            
-                            </div>
                             <div className={styles.texts}>
                                 <a href="#projects">
                                     <div className="hover">
