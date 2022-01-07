@@ -4,18 +4,12 @@ import Index from 'pages';
 
 import styles from "./index.module.scss";
 
-
 function App() {
 
     const [cords, setCords] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
     const [onHover, setOnHover] = useState(false);
 
     useEffect(() => {
-
-        // @ts-ignore
-        window.projectsDeltaY = 0;
-
-        let projectsContainer = document.getElementById("horizontalScrollingContainer")!;
 
         let mousemove = (e: any) => {
             //setCords({ x: e.x, y: e.y });
@@ -49,39 +43,20 @@ function App() {
 
             if (window.scrollY >= window.innerHeight) {
                 //console.log(window.scrollY - window.innerHeight);
-                projectsContainer.style.left = `calc(40% - ${window.scrollY - window.innerHeight}px)`;
+                document.getElementById("horizontalScrollingContainer")!.style.left = `calc(40% - ${window.scrollY - window.innerHeight}px)`;
                 //window.scrollTo(0, window.innerHeight);
                 return false
             } else {
-                projectsContainer.style.left = `40%`;
-            }
-        }
-
-        let onWheel = (e: any) => {
-
-            // @ts-ignore
-            window.projectsDeltaY += e.deltaY;
-            console.log(e.deltaY);
-
-            if (window.scrollY >= window.innerHeight) {
-                //console.log(window.scrollY - window.innerHeight);
-                // @ts-ignore
-                projectsContainer.style.left = `calc(40% - ${e.deltaY}px)`;
-                //window.scrollTo(0, window.innerHeight);
-                return false
-            } else {
-                projectsContainer.style.left = `40%`;
+                document.getElementById("horizontalScrollingContainer")!.style.left = `40%`;
             }
         }
 
         window.addEventListener("mousemove", mousemove);
         window.addEventListener("scroll", onScroll);
-        projectsContainer.addEventListener("wheel", onWheel);
 
         return () => {
             window.removeEventListener("mousemove", mousemove);
             window.removeEventListener("scroll", onScroll);
-            projectsContainer.removeEventListener("wheel", onWheel);
         }
     }, []);
 

@@ -31,7 +31,7 @@ function Index() {
                 </div>
             </div>
         </div>
-        <div id="projects" className={[styles.section, styles.sectionTwo].join(" ")} style={{ backgroundColor: '#222', height: "100vh" }}>
+        <div id="projects" className={[styles.section, styles.sectionTwo].join(" ")} style={{ backgroundColor: '#222', height: "530vw" }}>
             <div className={styles.fixed}>
                 <div id="horizontalScrollingContainer" className={styles.scrollingContainer}>
                     <div style={{ display: 'flex' }}>
