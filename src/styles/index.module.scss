@@ -202,13 +202,7 @@
 
 .scrollingContainer {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     overflow: auto;
-    position: relative;
-    left: 0;
     &> div:nth-child(1) {
         //width: 530vw;
     }
