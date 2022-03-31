@@ -177,7 +177,6 @@
 }
 
 .sectionTwo {
-    text-align: right;
 
     & .texts {
         & div {
@@ -232,13 +231,9 @@
 
 .scrollingContainer {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     overflow: auto;
-    position: relative;
     &> div:nth-child(1) {
-        width: 530vw;
+        //width: 530vw;
     }
 }
 

@@ -43,11 +43,11 @@ function App() {
 
             if (window.scrollY >= window.innerHeight) {
                 //console.log(window.scrollY - window.innerHeight);
-                document.getElementById("horizontalScrollingContainer")!.style.left = `calc(40% - ${window.scrollY - window.innerHeight}px)`;
+                document.getElementById("horizontalScrollingContainer")!.style.marginLeft = `calc(0% - ${window.scrollY - window.innerHeight}px)`;
                 //window.scrollTo(0, window.innerHeight);
                 return false
             } else {
-                document.getElementById("horizontalScrollingContainer")!.style.left = `40%`;
+                document.getElementById("horizontalScrollingContainer")!.style.marginLeft = `0`;
             }
         }
 
