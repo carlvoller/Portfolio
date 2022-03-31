@@ -20,9 +20,9 @@ function Index() {
                         <h1 className="slideUp">Carl Voller</h1>
                     </div>
                     <div>
-                        <h3 className="slideUp">I make pretty cool websites</h3>
+                        <h3 className="slideUp">I make pretty cool apps and websites</h3>
                     </div>
-                    <a href="https://instagram.com/carl_the_meh"><FontAwesomeIcon icon={["fab", "instagram"]} /></a>
+                    <a href="https://instagram.com/carl_voller"><FontAwesomeIcon icon={["fab", "instagram"]} /></a>
                     <a href="https://www.linkedin.com/in/carl-ian-voller/"><FontAwesomeIcon icon={["fab", "linkedin"]} /></a>
                     <a href="mailto:carlvoller@codecollab.io"><FontAwesomeIcon icon={["far", "envelope"]} /></a>
                 </div>
@@ -31,7 +31,7 @@ function Index() {
                 </div>
             </div>
         </div>
-        <div id="projects" className={[styles.section, styles.sectionTwo].join(" ")} style={{ backgroundColor: '#222', height: "530vw" }}>
+        {/*<div id="projects" className={[styles.section, styles.sectionTwo].join(" ")} style={{ backgroundColor: '#222', height: "530vw" }}>
             <div className={styles.fixed}>
                 <div id="horizontalScrollingContainer" className={styles.scrollingContainer}>
                     <div style={{ display: 'flex' }}>
@@ -112,7 +112,7 @@ function Index() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>*/}
     </div>);
 }
 

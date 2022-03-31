@@ -112,6 +112,35 @@
     }
 }
 
+@media (max-width: 800px) {
+    .bgBigText {
+        flex-direction: column;
+        height: 100vh;
+        &>div {
+            color: #151515;
+            text-align: center;
+            margin: 15vw 0;
+            & h1 {
+                font-size: 6vh !important;
+            }
+            & h3 {
+                font-size: 3vh !important;
+                margin: 10px 20px;
+                letter-spacing: 0.5vw !important;
+            }
+
+            & a {
+                margin: 0 20px;
+            }
+        }
+        &>.img {
+            width: 100vw;
+            margin-top: 0px;
+            margin-bottom: -50vh;
+        }
+    }
+}
+
 .texts {
     & div {
         overflow: hidden;
