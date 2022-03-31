@@ -6,7 +6,7 @@ import styles from "./index.module.scss";
 
 function App() {
 
-    const [cords, setCords] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+    //const [cords, setCords] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
     const [onHover, setOnHover] = useState(false);
 
     useEffect(() => {
