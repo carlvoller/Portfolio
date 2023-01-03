@@ -3,6 +3,9 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from "styles/index.module.scss";
+import Intro from "./MainPage/intro";
+import Experience from "./MainPage/experience";
+import Projects from "./MainPage/projects";
 
 function Index() {
 
@@ -25,12 +28,18 @@ function Index() {
                     <a href="https://instagram.com/carl_voller"><FontAwesomeIcon icon={["fab", "instagram"]} /></a>
                     <a href="https://www.linkedin.com/in/carl-ian-voller/"><FontAwesomeIcon icon={["fab", "linkedin"]} /></a>
                     <a href="mailto:carlvoller@codecollab.io"><FontAwesomeIcon icon={["far", "envelope"]} /></a>
+                    <div>
+                        <h3 onClick={() => window.open("/Carl Voller CV.pdf", "blank")} className="slideUp hover" style={{ fontSize: "20%", letterSpacing: 1.5, textDecoration: "underline" }}>Download my Resume</h3>
+                    </div>
                 </div>
                 <div className={[styles.img].join(" ")} style={{ backgroundImage: "url(/assets/me.png)" }}>
                     <div className={["hover", styles.hoverZone].join(" ")}></div>
                 </div>
             </div>
         </div>
+        <Intro />
+        <Experience />
+        <Projects />
         {/*<div id="projects" className={[styles.section, styles.sectionTwo].join(" ")} style={{ backgroundColor: '#222', height: "530vw" }}>
             <div className={styles.fixed}>
                 <div id="horizontalScrollingContainer" className={styles.scrollingContainer}>

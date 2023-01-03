@@ -11,44 +11,56 @@ function App() {
 
     useEffect(() => {
 
-        let mousemove = (e: any) => {
+        let mousemove = (e: MouseEvent) => {
             //setCords({ x: e.x, y: e.y });
 
+            const target = e.target as HTMLElement;
 
-            ["cursor1", "cursor2"].forEach((id) => {
-                document.getElementById(id)!.style.left = e.x - 30 + "px";
-                document.getElementById(id)!.style.top = e.y - 30 + "px";
-            });
-            try {
-                setOnHover(["A", "svg", "path"].indexOf(e.target.nodeName) >= 0 || Array.from(e.target.classList).indexOf("hover") >= 0 || Array.from(e.target.parentElement.classList).indexOf("hover") >= 0);
-            } catch { }
+            (async () => {
+                document.querySelectorAll<HTMLDivElement>(".cursor").forEach((el) => {
+                    el.style.left = e.x - 30 + "px";
+                    el.style.top = e.y - 30 + "px";
+                });
+                const isHoverNode = target.nodeName === "A"
+                                 || target.nodeName === "svg"
+                                 || target.nodeName === "path";
+                if (isHoverNode) return setOnHover(true);
+                const isHoverClass = target.classList.contains("hover");
+                if (isHoverClass) return setOnHover(true);
+                const isParentHoverClass = (target.parentElement as HTMLDivElement).classList.contains("hover");
+                setOnHover(isParentHoverClass);
+            })().catch();
         }
 
         let onScroll = (e: any) => {
 
             if (window.scrollY <= window.innerHeight / 2) {
                 document.getElementsByTagName("body")[0].classList.remove(styles.sectionTwoBg)
-            } else if (window.scrollY > window.innerHeight / 2) {
+            } else if (window.scrollY > window.innerHeight / 2 && window.scrollY < window.innerHeight * 1.5) {
+                document.getElementsByTagName("body")[0].classList.add(styles.sectionTwoBg)
+            } else if (window.scrollY > window.innerHeight * 1.5 && window.scrollY < window.innerHeight * 2.5) {
+                document.getElementsByTagName("body")[0].classList.remove(styles.sectionTwoBg)
+            } else if (window.scrollY > window.innerHeight * 2.5 && window.scrollY < window.innerHeight * 3.5) {
                 document.getElementsByTagName("body")[0].classList.add(styles.sectionTwoBg)
             }
 
-            if (window.scrollY >= window.innerHeight + window.innerWidth * 2) {
-                document.getElementById("projects")!.style.backgroundColor = "white";
-                document.getElementsByTagName("body")[0].classList.remove(styles.sectionTwoBg)
-            } else if (window.scrollY >= window.innerHeight + window.innerWidth / 2) {
-                document.getElementById("projects")!.style.backgroundColor = "#151515";
-            } else {
-                document.getElementById("projects")!.style.backgroundColor = "#222";
-            }
+            // if (window.scrollY >= window.innerHeight + window.innerWidth * 2) {
+            //     document.getElementById("projects")!.style.backgroundColor = "white";
+            //     document.getElementsByTagName("body")[0].classList.remove(styles.sectionTwoBg)
+            // } else if (window.scrollY >= window.innerHeight + window.innerWidth / 2) {
+            //     document.getElementById("projects")!.style.backgroundColor = "#151515";
+            // } else {
+            //     document.getElementById("projects")!.style.backgroundColor = "#222";
+            // }
 
-            if (window.scrollY >= window.innerHeight) {
-                //console.log(window.scrollY - window.innerHeight);
-                document.getElementById("horizontalScrollingContainer")!.style.marginLeft = `calc(0% - ${window.scrollY - window.innerHeight}px)`;
-                //window.scrollTo(0, window.innerHeight);
-                return false
-            } else {
-                document.getElementById("horizontalScrollingContainer")!.style.marginLeft = `0`;
-            }
+            // if (window.scrollY >= window.innerHeight) {
+            //     //console.log(window.scrollY - window.innerHeight);
+            //     document.getElementById("horizontalScrollingContainer")!.style.marginLeft = `calc(0% - ${window.scrollY - window.innerHeight}px)`;
+            //     //window.scrollTo(0, window.innerHeight);
+            //     return false
+            // } else {
+            //     document.getElementById("horizontalScrollingContainer")!.style.marginLeft = `0`;
+            // }
         }
 
         window.addEventListener("mousemove", mousemove);
@@ -101,8 +113,8 @@ function App() {
         <Switch>
             <Route exact path="/" component={Index} />
         </Switch>
-        <div id="cursor1" className={[styles.cursor, onHover ? styles.cursorHover : ""].join(" ")} />
-        <div id="cursor2" className={[styles.cursor2, onHover ? styles.cursor2Hover : ""].join(" ")} />
+        <div id="cursor1" className={[styles.cursor, onHover ? styles.cursorHover : "", "cursor"].join(" ")} />
+        <div id="cursor2" className={[styles.cursor2, onHover ? styles.cursor2Hover : "", "cursor"].join(" ")} />
     </>);
 }
 

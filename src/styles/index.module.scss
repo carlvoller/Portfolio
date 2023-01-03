@@ -1,6 +1,6 @@
 .pageHolder {
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,7 +91,6 @@
 }
 
 .bgBigText {
-    color: #090909;
     font-size: 10vh;
     font-family: 'Montserrat', monospace;
     display: flex;
