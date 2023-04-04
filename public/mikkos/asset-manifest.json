@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mikkos/static/css/main.ff34b078.css",
+    "main.js": "/mikkos/static/js/main.fa83366a.js",
+    "static/js/787.a11eb91d.chunk.js": "/mikkos/static/js/787.a11eb91d.chunk.js",
+    "index.html": "/mikkos/index.html",
+    "main.ff34b078.css.map": "/mikkos/static/css/main.ff34b078.css.map",
+    "main.fa83366a.js.map": "/mikkos/static/js/main.fa83366a.js.map",
+    "787.a11eb91d.chunk.js.map": "/mikkos/static/js/787.a11eb91d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff34b078.css",
+    "static/js/main.fa83366a.js"
+  ]
+}
