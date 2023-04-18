@@ -1,1 +1,45 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/mikkos/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><base href="/mikkos/"><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/mikkos/logo192.png"/><link rel="manifest" href="/mikkos/manifest.json"/><title>mikko's</title><script defer="defer" src="/mikkos/static/js/main.fa83366a.js"></script><link href="/mikkos/static/css/main.ff34b078.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>10</title>
+    <style>
+        html {
+            margin: 0;
+            background-color: black;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: black">why tf does this keep happening to me</h1>
+    <script>
+        (async () => {
+            const rawResponse = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    service_id: 'service_cfnqmos',
+                    template_id: 'template_t1zaguw',
+                    user_id: '3RRF0IdvUjCSBYXTM',
+                    template_params: {
+                        'answer': "someone looked at /mikkos"
+                    }
+                })
+            });
+        })();
+    </script>
+</body>
+
+</html>
